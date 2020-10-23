@@ -93,19 +93,19 @@ body {
 
 body {
   font-family: "Lato", sans-serif;
-  overflow-x: hidden;
 }
 
 .wrapper {
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1180px;
   width: 100%;
-  padding: 0 20px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .page {
@@ -118,8 +118,7 @@ body {
   position: absolute;
   width: 100%;
   height: 62px;
-  margin: 40px 0px 204px 0px;
-  overflow: hidden;
+  margin: 40px 0px 0px 0px;
 }
 
 .header__body {
@@ -567,16 +566,20 @@ body {
   background-size: cover;
 }
 
-.slider__text {
-  display: block;
-  margin: 0 auto;
+.quotes__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.slider__text:after {
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+.quotes__slider {
+  position: relative;
 }
 
 .price {
@@ -677,10 +680,6 @@ body {
   border-radius: 30px;
   position: absolute;
   top: 80%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -909,8 +908,6 @@ body {
 .mache .section__text {
   color: white;
   font-size: 15px;
-  line-height: calc(30 / 15);
-  max-width: 688px;
 }
 
 .mache__btn {
@@ -1244,9 +1241,9 @@ body {
     transition: all 0.4s ease;
     background-color: #222;
     padding: 10px 15px 10px 15px;
-    -webkit-transform: translate(120%, 0);
-        -ms-transform: translate(120%, 0);
-            transform: translate(120%, 0);
+    -webkit-transform: translate(0, -120%);
+        -ms-transform: translate(0, -120%);
+            transform: translate(0, -120%);
   }
 
   .nav.active {
